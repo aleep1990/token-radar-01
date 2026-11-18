@@ -92,7 +92,15 @@ button { cursor: pointer; }
 }
 .field input { min-width: 260px; }
 .field input::placeholder { color: var(--faint); }
-.field select { appearance: none; padding-right: 28px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2393a5b4' fill='none' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+.field select {
+  appearance: none; padding-right: 28px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #93a5b4 50%),
+    linear-gradient(135deg, #93a5b4 50%, transparent 50%);
+  background-position: calc(100% - 20px) center, calc(100% - 15px) center;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
 .count { margin-left: auto; color: var(--muted); font-size: 13px; align-self: center; font-family: var(--font-num); }
 .count b { color: var(--ink); }
 .pill {
